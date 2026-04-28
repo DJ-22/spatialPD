@@ -1,0 +1,52 @@
+GRID_WIDTH = 30
+GRID_HEIGHT = 30
+
+NUM_GEN = 2000
+EQUILIBRIUM_WINDOW = 500
+
+INITIAL_POPULATION_DENSITY = 0.7
+INITIAL_STRATEGY_PROBABILITIES = [1/6, 1/6, 1/6, 1/6, 1/6, 1/6]
+
+R = 1
+P = 0
+S = 0
+B = 1.5
+
+REPRODUCTION_RATE = 0.8
+MUTATION_RATE = 0.01
+LAMBDA = 0.02
+
+ALLC = 0
+ALLD = 1
+TFT = 2
+PAVLOV = 3
+GRUDGER = 4
+RANDOM = 5
+
+NUM = 6
+STRATEGY_MAPPING = {
+    ALLC: "Always Cooperate",
+    ALLD: "Always Defect",
+    TFT: "Tit for Tat",
+    PAVLOV: "Pavlov",
+    GRUDGER: "Grudger",
+    RANDOM: "Random"
+}
+STRATEGY_COLORS = {
+    ALLC: "#00FF00",
+    ALLD: "#FF0000",
+    TFT: "#0000FF",
+    PAVLOV: "#FFFF00",
+    GRUDGER: "#FFA500",
+    RANDOM: "#800080"
+}
+
+B_VALUES = [1.1, 1.5, 1.9]
+MUTATION_VALUES = [0.001, 0.01, 0.05]
+# Sweep grid kept inside the live regime: above ~λ=0.05 reproduction can't
+# keep up with deaths under mostly-defection dynamics and the population
+# goes extinct, which makes the equilibrium metrics meaningless.
+LAMBDA_VALUES = [0.005, 0.01, 0.02, 0.03]
+
+NUM_SEEDS = 3
+BASE_SEED = 22
