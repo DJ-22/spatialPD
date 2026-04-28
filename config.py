@@ -43,9 +43,7 @@ STRATEGY_COLORS = {
 
 B_VALUES = [1.1, 1.5, 1.9]
 MUTATION_VALUES = [0.001, 0.01, 0.05]
-# Sweep grid kept inside the live regime: above ~λ=0.05 reproduction can't
-# keep up with deaths under mostly-defection dynamics and the population
-# goes extinct, which makes the equilibrium metrics meaningless.
+
 LAMBDA_VALUES = [0.005, 0.01, 0.02, 0.03]
 
 NUM_SEEDS = 3
